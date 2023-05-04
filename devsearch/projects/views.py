@@ -28,6 +28,5 @@ def projects(request):
 
 def project(request, pk):
     projectObj = Project.objects.get(id=pk)
-    tags = projectObj.tags.all()
-    return render(request, 'projects/single-projects.html', {'project':projectObj, 'tags':tags})
+    return render(request, 'projects/single-projects.html', {'project':projectObj})
     
